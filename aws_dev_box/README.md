@@ -8,4 +8,4 @@ Make sure you update the [saml2aws](./saml2aws) file with your username before b
 
 ## How to run
 1. `docker run -it --rm --entrypoint=bash -v /your/local/code/dir:/code/ aws_dev_box`
-1. Login to AWS using your versent creds by running `saml2aws login` before using sceptre or AWS CLI.
+1. Login to AWS using your ping creds by running `saml2aws login` before using sceptre or AWS CLI.
