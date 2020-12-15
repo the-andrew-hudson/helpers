@@ -1,7 +1,7 @@
 [default]
 app_id               =
 url                  = https://id.versent.com.au
-username             = andrew.hudson
+username             = user.name
 provider             = Ping
 mfa                  = Auto
 skip_verify          = false

@@ -1,5 +1,8 @@
-# CentOS 8 based AWS developer container
 FROM centos:latest
+
+LABEL version="0.1.0"
+LABEL description="CentOS 8 based AWS developer container"
+LABEL maintainer="andrew.hudson@versent.com.au"
 
 # Pre-reqs
 RUN yum install -y tar gzip unzip python3
