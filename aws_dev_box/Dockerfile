@@ -5,7 +5,12 @@ LABEL description="CentOS 8 based AWS developer container"
 LABEL maintainer="andrew.hudson@versent.com.au"
 
 # Pre-reqs
-RUN yum install -y tar gzip unzip python3
+RUN yum install -y tar gzip unzip python3 jq
+
+# Terraform
+RUN yum install -y yum-utils
+RUN yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+RUN yum -y install terraform
 
 # saml2aws
 # execute 'saml2aws login' when inside container
@@ -22,5 +27,9 @@ RUN curl -L "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscl
 RUN unzip awscliv2.zip
 RUN ./aws/install
 
+# Boto3 
+RUN pip3 install boto3 
+
 # sceptre
 RUN pip3 install sceptre
+
